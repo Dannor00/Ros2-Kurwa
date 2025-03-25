@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pid_controller</name>
+  <version>0.0.0</version>
+  <description>PID controller with service server, input node, and launch support</description>
+  <maintainer email="you@example.com">Daniel Hatlem</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Byggesystem -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Kjør-avhengigheter -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>pid_controller_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Hvis du skal bruke parametre med YAML -->
+  <exec_depend>ament_index_python</exec_depend>
+
+  <!-- For testing (valgfritt) -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Viktig for ROS2 å forstå at dette er en Python-pakke -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

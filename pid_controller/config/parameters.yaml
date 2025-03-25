@@ -1,0 +1,5 @@
+joint_simulator_node:
+  ros__parameters:
+    inertia: 1.0
+    damping: 0.1
+    update_rate: 50.0

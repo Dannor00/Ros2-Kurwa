@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: pid-controller
+Version: 0.0.0
+Summary: A simple PID controller example for ROS2.
+Maintainer: daniel-hatlem
+Maintainer-email: daniel-hatlem@todo.todo
+License: Apache-2.0
