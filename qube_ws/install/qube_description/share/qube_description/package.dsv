@@ -1,0 +1,9 @@
+source;share/qube_description/hook/pythonpath.ps1
+source;share/qube_description/hook/pythonpath.dsv
+source;share/qube_description/hook/pythonpath.sh
+source;share/qube_description/hook/ament_prefix_path.ps1
+source;share/qube_description/hook/ament_prefix_path.dsv
+source;share/qube_description/hook/ament_prefix_path.sh
+source;../../build/qube_description/share/qube_description/hook/pythonpath_develop.ps1
+source;../../build/qube_description/share/qube_description/hook/pythonpath_develop.dsv
+source;../../build/qube_description/share/qube_description/hook/pythonpath_develop.sh

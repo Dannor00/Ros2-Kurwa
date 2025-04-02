@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: qube-description
+Version: 0.0.1
+Summary: URDF description of the Quanser Qube for ROS 2 Jazzy
+Maintainer: daniel-hatlem
+Maintainer-email: daniehn@ntnu.no
+License: Apache-2.0

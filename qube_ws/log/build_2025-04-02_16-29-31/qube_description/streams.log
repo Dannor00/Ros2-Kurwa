@@ -1,0 +1,26 @@
+[0.433s] Invoking command in '/home/daniel-hatlem/qube_ws/build/qube_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/daniel-hatlem/qube_ws/build/qube_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel-hatlem/qube_ws/install/qube_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/daniel-hatlem/qube_ws/build/qube_description/build --no-deps symlink_data
+[0.602s] running develop
+[0.700s] running egg_info
+[0.700s] creating qube_description.egg-info
+[0.710s] writing qube_description.egg-info/PKG-INFO
+[0.710s] writing dependency_links to qube_description.egg-info/dependency_links.txt
+[0.711s] writing requirements to qube_description.egg-info/requires.txt
+[0.711s] writing top-level names to qube_description.egg-info/top_level.txt
+[0.711s] writing manifest file 'qube_description.egg-info/SOURCES.txt'
+[0.730s] reading manifest file 'qube_description.egg-info/SOURCES.txt'
+[0.731s] writing manifest file 'qube_description.egg-info/SOURCES.txt'
+[0.741s] running build_ext
+[0.741s] Creating /home/daniel-hatlem/qube_ws/install/qube_description/lib/python3.12/site-packages/qube-description.egg-link (link to .)
+[0.741s] 
+[0.741s] Installed /home/daniel-hatlem/qube_ws/build/qube_description
+[0.741s] running symlink_data
+[0.741s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/ament_index
+[0.742s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/ament_index/resource_index
+[0.742s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/ament_index/resource_index/packages
+[0.742s] symbolically linking /home/daniel-hatlem/qube_ws/build/qube_description/resource/qube_description -> /home/daniel-hatlem/qube_ws/install/qube_description/share/ament_index/resource_index/packages
+[0.742s] symbolically linking /home/daniel-hatlem/qube_ws/build/qube_description/package.xml -> /home/daniel-hatlem/qube_ws/install/qube_description/share/qube_description
+[0.742s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/qube_description/urdf
+[0.742s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/qube_description/launch
+[0.742s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/qube_description/config
+[0.742s] creating /home/daniel-hatlem/qube_ws/install/qube_description/share/qube_description/meshes
+[0.758s] Invoked command in '/home/daniel-hatlem/qube_ws/build/qube_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/daniel-hatlem/qube_ws/build/qube_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/daniel-hatlem/qube_ws/install/qube_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/daniel-hatlem/qube_ws/build/qube_description/build --no-deps symlink_data
