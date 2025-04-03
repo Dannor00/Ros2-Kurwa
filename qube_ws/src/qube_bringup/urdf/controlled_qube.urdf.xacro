@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="controlled_qube" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Argumenter -->
+  <xacro:arg name="baud_rate" default="115200" />
+  <xacro:arg name="device" default="/dev/ttyACM0" />
+  <xacro:arg name="simulation" default="false" />
+
+  <!-- Inkluder makro -->
+  <xacro:include filename="$(find qube_description)/urdf/qube.macro.xacro"/>
+  <xacro:include filename="$(find qube_driver)/ros2_control/qube_driver.ros2_control.xacro"/>
+
+  <!-- Kall Qube-beskrivelsen -->
+  <xacro:qube base_length="0.1" base_width="0.1" base_height="0.05"
+              disk_radius="0.04" disk_height="0.01"
+              pointer_length="0.05" pointer_width="0.005"/>
+
+  <!-- world link -->
+  <link name="world"/>
+
+  <!-- world-to-base joint -->
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Koble til ros2_control -->
+  <xacro:qube_driver_ros2_control
+      name="qube_driver"
+      prefix=""
+      baud_rate="$(arg baud_rate)"
+      device="$(arg device)"
+      simulation="$(arg simulation)" />
+
+</robot>

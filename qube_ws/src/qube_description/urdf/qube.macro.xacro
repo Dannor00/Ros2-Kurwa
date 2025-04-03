@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="qube" params="base_length base_width base_height disk_radius disk_height pointer_length pointer_width">
+
+    <!-- base -->
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <box size="${base_length} ${base_width} ${base_height}" />
+        </geometry>
+        <material name="black" />
+      </visual>
+    </link>
+
+    <!-- disk -->
+    <link name="disk_link">
+      <visual>
+        <geometry>
+          <cylinder radius="${disk_radius}" length="${disk_height}" />
+        </geometry>
+        <material name="red" />
+      </visual>
+    </link>
+
+    <joint name="motor_joint" type="continuous">
+      <parent link="base_link" />
+      <child link="disk_link" />
+      <origin xyz="0 0 ${base_height/2 + disk_height/2}" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <!-- pointer -->
+    <link name="pointer_link">
+      <visual>
+        <geometry>
+          <box size="${pointer_length} ${pointer_width} ${disk_height/2}" />
+        </geometry>
+        <material name="white" />
+      </visual>
+    </link>
+
+    <joint name="pointer_joint" type="fixed">
+      <parent link="disk_link" />
+      <child link="pointer_link" />
+      <origin xyz="${pointer_length/2} 0 ${disk_height/2}" rpy="0 0 0" />
+    </joint>
+
+  </xacro:macro>
+</robot>
