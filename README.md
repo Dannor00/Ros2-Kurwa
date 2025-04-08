@@ -1,4 +1,4 @@
-# ROS2-Kurwa 🚀🤖
+# ROS2-mini prodject
 
 *A glorious colab between master coder Daniel 🧠 and his loyal sidekick Marcin 💻 (who googles a lot but tries hard)*
 
