@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="qube" params="base_length base_width base_height disk_radius disk_height pointer_length pointer_width">
+
+    <material name="black">
+      <color rgba="0 0 0 1"/>
+    </material>
+    
+    <material name="red">
+      <color rgba="1 0 0 1"/>
+    </material>
+    
+    <material name="white">
+      <color rgba="1 1 1 1"/>
+    </material>
+    
+    <!-- base -->
+    <link name="base_link"/>
+
+    <!-- stator -->
+    <link name="stator_link">
+      <visual>
+        <geometry>
+          <box size="${base_length} ${base_width} ${base_height}" />
+        </geometry>
+        <material name="black" />
+      </visual>
+    </link>
+
+    <!-- disk -->
+    <link name="disk_link">
+      <visual>
+        <geometry>
+          <cylinder length="${disk_height}" radius="${disk_radius}"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+    </link>
+    
+<!-- pointer -->
+    <link name="pointer_link">
+      <visual>
+        <geometry>
+          <box size="${pointer_length} ${pointer_width} ${disk_height/2}" />
+        </geometry>
+        <material name="white" />
+      </visual>
+    </link>
+    
+    <joint name="stator_joint" type="fixed">
+      <parent link="base_link" />
+      <child link="stator_link" />
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="motor_joint" type="revolute">
+      <axis xyz="0 0 1" />
+      <limit lower="-3.1415" upper="3.1415" effort="10.0" velocity="1.0"/>
+      <parent link="stator_link"/>
+      <child link="disk_link"/>
+      <origin xyz="0 0 ${base_height/2}" rpy="0 0 0" />
+    </joint>
+    
+    <joint name="pointer_joint" type="fixed">
+      <parent link="disk_link"/>
+      <child link="pointer_link"/>
+      <origin xyz="0 0 ${disk_height/2}" rpy="0 0 0" />
+    </joint>
+
+  </xacro:macro>
+</robot>
